@@ -7,12 +7,15 @@ import { ChartsModule } from "ng2-charts";
 import { HttpClientModule } from '@angular/common/http';
 import { NumeroService } from './numerot.service';
 import {MatCardModule} from '@angular/material/card';
+import { LinechartComponent } from './linechart/linechart.component';
+
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LinechartComponent,
   ],
   imports: [ 
     MatCardModule,

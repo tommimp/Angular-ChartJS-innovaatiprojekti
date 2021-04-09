@@ -16,6 +16,7 @@ import { catchError, retry, map } from 'rxjs/operators';
 export class AppComponent {
 
   chart = [];
+  data = [];
 
   public chartupdate () {
     this._numero.fetchNumero()
@@ -25,6 +26,7 @@ export class AppComponent {
       let Decimal = result["decimal"]
       let Digit = result["digit"]
       let Normal = result["normal"]
+      this.data.push (Decimal,Digit)
       
       this.chart; new Chart('canvas', {
         type: 'bar',
@@ -32,7 +34,7 @@ export class AppComponent {
           labels: ["Dec","Dig"],
           datasets: [
             {
-              data: [Decimal, Digit],
+              data: this.data,
               backgroundColor: ['rgba(150, 10, 25, 0.5)','rgba(50, 100, 250, 0.5)'],
               borderColor: 'rgba(150, 10, 25, 0.5)',
               fill: true

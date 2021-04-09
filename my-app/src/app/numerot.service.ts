@@ -10,5 +10,8 @@ export class NumeroService {
   fetchNumero() {
     return this._http.get('https://random-data-api.com/api/number/random_number').pipe(map(result => result));
      }
+  fetchDevice(){
+    return this._http.get('https://random-data-api.com/api/device/random_device').pipe(map(result => result));
+     }
    
    }
