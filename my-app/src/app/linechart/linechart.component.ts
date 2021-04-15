@@ -31,7 +31,7 @@ export class LinechartComponent implements OnInit {
           datasets: [
             {
               data: this.data,
-              backgroundColor: ['rgba(150, 10, 25, 0.5)','rgba(50, 100, 250, 0.5)'],
+              backgroundColor: 'rgba(150, 10, 25, 0.5)',
               borderColor: 'rgba(150, 10, 25, 0.5)',
               fill: true
             },
@@ -57,7 +57,7 @@ export class LinechartComponent implements OnInit {
 
   constructor(private _numero: NumeroService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit() {this.chartupdate()}
 }
+
+

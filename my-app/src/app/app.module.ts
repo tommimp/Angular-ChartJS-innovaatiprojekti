@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NumeroService } from './numerot.service';
 import {MatCardModule} from '@angular/material/card';
 import { LinechartComponent } from './linechart/linechart.component';
+import { PiechartComponent } from './piechart/piechart.component';
+
 
 
 
@@ -16,6 +18,7 @@ import { LinechartComponent } from './linechart/linechart.component';
   declarations: [
     AppComponent,
     LinechartComponent,
+    PiechartComponent,
   ],
   imports: [ 
     MatCardModule,

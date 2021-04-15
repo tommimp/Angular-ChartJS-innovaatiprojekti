@@ -1,0 +1,23 @@
+<p>piechart works!</p>
+<div>
+    <div>
+      <div class="chart">
+        <canvas baseChart
+          [data]="pieChartData"
+          [labels]="pieChartLabels"
+          [chartType]="pieChartType"
+          [options]="pieChartOptions"
+          [plugins]="pieChartPlugins"
+          [colors]="pieChartColors"
+          [legend]="pieChartLegend">
+        </canvas>
+      </div>
+    </div>
+  </div>
+  <div>
+    <button mat-button mat-raised-button color="primary" (click)="datahaku()">Lisää Dataa</button>
+    <button mat-button mat-raised-button color="primary" (click)="ToNormal()">To Normal</button>
+    <button mat-button mat-raised-button color="primary" (click)="ToDigit()">To Digit</button>
+    <button mat-button mat-raised-button color="primary" (click)="ToDecimal()">To Decimal</button>
+    <button mat-button mat-raised-button color="primary" (click)="PoistaData()">Poista Dataa</button>
+  </div>

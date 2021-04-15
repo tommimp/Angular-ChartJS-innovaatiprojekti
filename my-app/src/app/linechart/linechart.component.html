@@ -1,4 +1,5 @@
 <p>linechart works!</p>
-<div *ngIf="chart" style = "width: 200px; height: 200px; border: 1px solid">
+<div *ngIf="chart">
     <canvas id="linechart"></canvas>
+    <button mat-button mat-raised-button color="primary" (click)="chartupdate()">Lisää dataa</button>
   </div>
