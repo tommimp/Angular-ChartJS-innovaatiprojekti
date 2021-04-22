@@ -27,6 +27,7 @@ export class AppComponent implements OnInit{
   public barChartLabels: Label[] = ['Dec','Dig'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
+  public pieChartData: ChartDataSets[] = [];
   public barChartPlugins = [pluginDataLabels];
   public barChartColors = [
     {
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit{
       let Digit = result["digit"]
       let Normal = result["normal"]
       this.data.push (Decimal,Digit)
+
       
 
     })

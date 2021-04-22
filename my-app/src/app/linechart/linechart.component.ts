@@ -58,6 +58,10 @@ export class LinechartComponent implements OnInit {
   constructor(private _numero: NumeroService) {}
 
   ngOnInit() {this.chartupdate()}
+
+  DeleteLast(): void {
+    this.data.pop();
+    this.manu.pop();
+
 }
-
-
+}

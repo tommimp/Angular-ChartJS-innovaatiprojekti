@@ -84,8 +84,9 @@ export class PiechartComponent implements OnInit {
     this.pieChartColors[0].backgroundColor.push('rgba(250,10,60,0.3)');
   }
   PoistaData(): void {
-    this.pieChartLabels.pop();
-    this.pieChartData.pop();
+    this.data1.pop();
+    this.data2.pop();
+    this.data3.pop();
     this.pieChartColors[0].backgroundColor.pop();
   }
 
