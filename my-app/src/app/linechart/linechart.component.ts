@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
 import { NumeroService } from '../numerot.service';
+import { Observable} from 'rxjs';
+import { interval } from 'rxjs';
+
+
+
 
 @Component({
   selector: 'app-linechart',
@@ -57,11 +62,15 @@ export class LinechartComponent implements OnInit {
 
   constructor(private _numero: NumeroService) {}
 
-  ngOnInit() {this.chartupdate()}
+  ngOnInit() {
+    this.chartupdate() 
+  }
+
+
+
 
   DeleteLast(): void {
-    this.data.pop();
-    this.manu.pop();
-
+    this.data.length = 0;
+    this.manu.length = 0;
 }
 }

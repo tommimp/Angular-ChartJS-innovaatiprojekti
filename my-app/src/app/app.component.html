@@ -10,26 +10,40 @@
     -moz-osx-font-smoothing: grayscale;
   }
 </style>
+<p>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Innovaatioprojekti</span>
+  </mat-toolbar>
+</p>
 
-<div>
-  <div>
-    <div style="display: block">
-      <canvas baseChart
-        [datasets]="barChartData"
-        [labels]="barChartLabels"
-        [options]="barChartOptions"
-        [plugins]="barChartPlugins"
-        [legend]="barChartLegend"
-        [chartType]="barChartType"
-        [colors]="barChartColors">
-      </canvas>
-    </div>
-    <button mat-button mat-raised-button color="primary" (click)="chartupdate()">Update</button>
-  </div>
-</div>
 
-<app-linechart></app-linechart>
-<app-piechart></app-piechart>
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Preset 1">
+<ul class="flex-container">
+  <li class="flex-item"><app-barchart></app-barchart> </li>
+  <li class="flex-item"><app-linechart></app-linechart></li>
+  <li class="flex-item"><app-piechart></app-piechart></li>
+  <li class="flex-item"><app-barchart></app-barchart> </li>
+  <li class="flex-item"><app-piechart></app-piechart></li>
+  <li class="flex-item"><app-piechart></app-piechart></li>
+</ul>
+</mat-tab>
+<mat-tab label="Preset 2">
+  <ul class="flex-container">
+    <li class="flex-item"><app-barchart></app-barchart> </li>
+    <li class="flex-item"><app-piechart></app-piechart></li>
+  </ul>
+</mat-tab>
+<mat-tab label="Preset 3">
+  <ul class="flex-container">
+    <li class="flex-item"><app-barchart></app-barchart> </li>
+  </ul>
+</mat-tab>
+<mat-tab-group>
+
 
 
 <router-outlet></router-outlet>
